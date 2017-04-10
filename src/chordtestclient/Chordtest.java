@@ -16,6 +16,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import utility.PropertyLoad;
 
 
@@ -24,7 +29,7 @@ import utility.PropertyLoad;
  *
  * @author Ashish
  */
-public class Chordtest {
+public class Chordtest extends Application {
 
     /**
      * @param args the command line arguments
@@ -54,13 +59,15 @@ public class Chordtest {
         return true;
     }
     
+    
+    /*
     public static boolean sendfiles() throws Exception //Send files to server for executing application
     {
         
                 Socket socket = new Socket(PropertyLoad.getString("bootstrapperip"),
                 PropertyLoad.getInteger("tasklistenport"));
         
-                 File[] files = new File[2];
+                // File[] files = new File[2];
                  files[0]=new File("pagecounts");//Data set containing wikipedia dum
                  files[1]=new File("TaskTest.jar"); //Jar file containing map and reduce function
 
@@ -99,15 +106,25 @@ public class Chordtest {
                 return true;
                 
     }
+    */
     
-    
-    public static void main(String[] args) throws Exception{
+  
+    public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("FXML.fxml"));
+        
+        Scene scene = new Scene(root);
+        
+        stage.setScene(scene);
+        stage.show();
+    }  
+    public static void main(String[] args)throws Exception{
         // TODO code application logic here
         cleanup();
-        System.out.println(SystemInfo.Info());
-        CpuUsage.printUsage();           
-        initpeer();
-        sendfiles();
+        //System.out.println(SystemInfo.Info());
+        //CpuUsage.printUsage();           
+       // initpeer();
+        //sendfiles();
+        launch(args);
                
         
        // senddata("H:\\hadoophh\\hadoop-2.6.3\\LICENSE.txt");
@@ -132,10 +149,7 @@ public class Chordtest {
         //System.out.println(values[1]);
         System.out.println(vs.size());
         */
-        while(true)
-        {
-            
-        }
+        
     
 }
     public static void cleanup()

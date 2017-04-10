@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="280.0" prefWidth="512.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chordtestclient.FXMLController">
+   <children>
+      <TextField fx:id="email" layoutX="143.0" layoutY="54.0" prefHeight="25.0" prefWidth="227.0" promptText="Email" />
+      <TextField fx:id="inputfile" layoutX="143.0" layoutY="100.0" prefHeight="25.0" prefWidth="227.0" promptText="Choose Input File" />
+      <TextField fx:id="jarfile" layoutX="143.0" layoutY="150.0" prefHeight="25.0" prefWidth="227.0" promptText="Choose Jar File" />
+      <Button fx:id="inputbutton" layoutX="404.0" layoutY="100.0" mnemonicParsing="false" onAction="#onClickinputbutton" prefHeight="25.0" prefWidth="67.0" text="Open" />
+      <Button fx:id="jarbutton" layoutX="404.0" layoutY="150.0" mnemonicParsing="false" onAction="#onClickjarbutton" prefHeight="25.0" prefWidth="67.0" text="Open" />
+      <Button fx:id="executebutton" layoutX="198.0" layoutY="216.0" mnemonicParsing="false" onAction="#onClickButton" prefHeight="39.0" prefWidth="117.0" text="Execute Task" />
+   </children>
+</AnchorPane>

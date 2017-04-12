@@ -47,7 +47,7 @@ public class Filesender implements Runnable {
                 DataOutputStream dos = new DataOutputStream(bos);
 
                 //dos.writeInt(files.length);
-
+                dos.writeUTF(email);
                 for(File file : files)
                 {
                       long length = file.length();
